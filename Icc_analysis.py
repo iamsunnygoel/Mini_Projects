@@ -46,7 +46,9 @@ avg_iccs_per_feature = grouped.groupby('object_name')['iccs_used'].mean().sort_v
 
 print(avg_iccs_per_feature.head(21))
 
-# Convert to DataFrame for better HTML formatting
+
+
+# WEBPAGE VIEW -->Convert to DataFrame for better HTML formatting
 avg_iccs_df = avg_iccs_per_feature.reset_index()
 avg_iccs_df.columns = ['Feature', 'Average_ICCs_Used']
 
